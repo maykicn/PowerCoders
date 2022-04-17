@@ -1,0 +1,25 @@
+Inputs: Dad, Mam, Son, Daughter, Tunnel, Torch
+Output: All family have to pass tunnel in time
+
+Constraints:
+    Dad 1 min
+    Mam 2 min
+    Son 4 min
+    Daughter 5 min
+    Time: max 12 min
+    Only one torch
+    All passing must be with torch
+    Max 2 persons can pass at the same time
+    Time depends on slowest one per passing
+
+ Steps:
+                                                  #totalTime= 0     Left side:Son, Daughter, Mam and Dad -  Right side: null
+
+    PASS Dad and Mam with the torch  // 2 min --> totalTime 2 min           Left side: Son and Daughter       -  Right side: Dad and Mam  
+    RETURN Dad with the torch        // 1 min --> totalTime 2 + 1 = 3 min   Left side: Son and Daughter, Dad  -  Right side: Mam
+    PASS Son and Daughter            // 5 min --> totalTime 3 + 5 = 8 min   Left side: Dad                    -  Right side: Mam, Son and Daughter
+    RETURN Mam with the torch        // 2 min --> totalTime 8 + 2 = 10 min  Left side: Dad and Mam            -  Right side: Son and Daughter
+    PASS Mam and Dad with the torch  // 2 min --> totalTime 10 + 2 = 12 min Left side: null                   -  Right side: Son, Daughter, Mam and Dad        
+
+
+    

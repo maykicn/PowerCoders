@@ -1,0 +1,100 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after { 
+  box-sizing: inherit;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "header header header"
+    "main main main"
+    "main main main"
+    "main main main"
+    "main main main"
+    "main main main"
+    "main main main"; /*3 column icin 3 defa header yazdik*/
+  margin: 0;
+  height: 100%; /* bunu nwden yapptik*/
+  padding: 0;
+}
+header {
+  border-top: 2rem solid skyblue;
+  grid-area: header; /* parent ta grid templte olursa child da grid area olur - 3 column icin 3 defa header yazdik burdaki header ismi ile yukardaki column icinde tanimladigimiz header ismi ayni olmasi lazim*/
+}
+
+main {
+  display: grid;
+  grid-area: main;
+  grid-template-areas:
+    "content"
+    "content"
+    "content"
+    "signup"
+    "feature1"
+    "feature2"
+    "feature3";
+  padding: 0;
+}
+
+article {
+  background: lightgray;
+  grid-area: content;
+}
+
+section {
+  background: lightcyan;
+  grid-area: signup;
+}
+
+section:nth-of-type(2) {
+  background: yellow;
+  grid-area: feature1;
+}
+
+section:nth-of-type(3) {
+  background: crimson;
+  grid-area: feature2;
+}
+
+section:nth-of-type(4) {
+  background: palevioletred;
+  grid-area: feature3;
+}
+/* tablet*/
+@media screen and (min-width: 770px) {
+  main {
+    grid-template-areas:
+      'content content'
+      'content content'
+     'signup feature1'
+     'feature2 feature3';
+  }
+}
+/* desktop*/
+@media screen and (min-width: 1024px) {
+  main {
+    grid-template-areas:
+        'feature1 feature2 feature3'
+        'feature1 feature2 feature3'
+        'feature1' 'feature2' 'feature3'
+        'signup signup signup'
+        'content content content'       ;
+  }
+}

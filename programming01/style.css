@@ -1,0 +1,66 @@
+/*
+Exercise -1
+
+1. Users give the numbers. I assume that 10 numbers as a list.
+2. [2,8,0,3,1,-1,2,10,9,4]
+3. I create one variable called "min" end I assumed that +infinity
+4. I create new empty list called smallList to store small number
+5. I start from next first number I assign first number to "min"
+6. Then I compare min with the rest of the orgin list end samllList
+7. If there is any number smaller than in the orgin list i assign that number to min 
+8. At the same time i compare min with smallList if there is the same number in the smallList I stop that comparison and continue next number.
+9. If smallList does not include min number I assign min to smallList.
+10. Repeat 5-9 steps until origin list is empty. 
+
+
+
+[2,8,0,3,1,-1,2,10,9,4]
+
+min
+
+[]
+
+*/
+
+/*
+Exercise - 2
+
+1. Users give the numbers. I assume that 10 numbers as a list.
+ [2,8,0,3,1,-1,2,10,9,4]
+2. I create a variable called "sum" and assign 0 to "sum" 
+3. Pick first element from list and add sum
+4. Then remove first elemnt.
+5. Repeat 3-4 steps until origin list is empty.
+6. When there are no numbers left in the list write sum
+
+*/
+
+/*
+Exercise - 3
+
+1. INPUT first number
+2. IF first input is not number
+        WRITE  "This is not number"
+   If first input is number 
+        STORE as firstNumber
+3.INPUT second number
+4. IF second input is not number
+        WRITE  "This is not number"
+   If second input is number 
+        STORE as secondNumber    
+5.IF firstNumber is greater than secondNumber
+        WRITE firstNumber-secondNumber
+    IF secondNumber is greater than firstNumber
+        WRITE  secondNumber-firstNumber            
+
+
+
+. CREATE a variable calles "biggestNumber" 
+
+1. Create a variable as a 
+2. Find the biggest number and assign the biggest number to biggestNumber
+3. Create a variable as a "smallestNumber" 
+4. Find the smallest number and assign the smallest number to smallestNumber
+
+
+*/
