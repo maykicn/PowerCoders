@@ -14,28 +14,45 @@ html {
 body {
   margin: 0;
   padding: 0;
-  height: 80%;
+  height: 100%;
 }
 
-.color {
-  height: 100%;
+.page1,
+.page3,
+.page5 {
+  height: 80%;
   margin: 0;
-  border: 2px solid blue;
-  background-color: blue;
+  background-color: #454772;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-/* section.color {
-  background-color: blue;
+.page2,
+.page4 {
   height: 80%;
-  text-align: center;
-  margin: 0%;
+  margin: 0;
+  background-color: #1b7517;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-*/
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 p {
-  font-size: 650%;
-  
-  height: 100%;
-  padding: 20%;
+  align-items: center;
+  font-size: 100px;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  margin-top: 40px;
+}
+li {
+  font-size: 15px;
+  margin-right: 3px;
 }
