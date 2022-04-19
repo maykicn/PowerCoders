@@ -22,7 +22,7 @@ let job = ['Aerospace Engineering and Operations Technicians',
    ' Automotive Engineers',
     ];
 let loc = ['New York City','Los Angeles','Chicago'];
-let children = [1,2,3];
+let children = [0,1,2,3];
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -34,4 +34,6 @@ console.log(`Your job is  ${job[getRandomInt(job.length)]}`)
 
 console.log(`Your location is  ${loc[getRandomInt(loc.length)]}`)
 
-console.log(`Your children is  ${children[getRandomInt(children.length)]}`)
+let futureChildren = children[getRandomInt(children.length)]
+
+console.log(`Your children is  ${futureChildren} ${futureChildren > 1 ? 'Kids': 'Kid'}`)
