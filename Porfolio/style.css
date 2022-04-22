@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Lato:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+}
+a,
+a:link,
+a:visited{
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+section,
+span,
+p{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header{
+    background-image: url(./sky.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+.header-navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+.header-logo{
+    font-size: 16px;
+    letter-spacing: 2px;
+    border-bottom: 5px solid black;
+    border-radius: 35px;
+    padding-bottom: 5px;
+
+}
+ul{
+    display: flex;
+}
+
+li{
+    margin-left: 27px;
+}
+a{
+    color:black;
+    font-weight: bold;
+    font-size: 15px;
+}
+.header-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1{
+    font-size: 8.5rem;
+    font-weight: 100;
+    line-height: 0.4;
+    letter-spacing: 2px;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color: red;
+}
+.first-letter{
+    font-size: 10.3rem;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color: red; /* for Welcome */
+}
+h3{
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+.btn-sky{
+    display: block;
+    background-color: red; /* Before animation*/
+    color: white;
+    padding: 10px 15px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    position: relative;/* because of line 113*/
+    overflow: hidden; /* prevent to overflow :after*/
+}
+
+/* is about get started action with hover*/
+.btn-sky::after{
+    content: "FLY"; /* if you dont write after pseudo :after will not work*/
+    position: absolute;/* if I use here absolute I have to add relative in main container*/
+    top: 100%;
+    left: 0;
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+.btn-sky:hover::after{
+    top: 0;
+}
