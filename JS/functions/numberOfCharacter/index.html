@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Of Chracter</title>
+  </head>
+
+  <body>
+    <script>
+      
+      function isString(name){
+        return /^[a-zA-Z]+$/.test(name)
+    }
+
+      const getName = () => {
+          let input = prompt('Please enter your name');
+          if(isString(input)){
+            return input;
+          }else{
+            return getName();
+          }
+      }
+      let lengthOfWord = (name) => {
+          return name.length;
+      }
+      console.log(lengthOfWord(getName()));
+    </script>
+  </body>
+</html>
