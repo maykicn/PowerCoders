@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ageCalculator</title>
+</head>
+<body>
+    <script>
+
+        /*
+        -month must be 12
+        -birth year <= current year
+        -if birth year is equal future year birth month is smaller than future month and also if month is equal birth day must be smaller than future day
+        -leap year 366
+        -year 365 day
+        -
+        
+        
+        
+        */
+
+
+
+
+        function dayOfMonth(number){
+
+            switch(number){
+                case 1:
+                    return 31;
+                    break;
+                case 2:
+                    return 28;
+                    break;
+                case 3:
+                    return 31;
+                    break;
+                case 4:
+                    return 30;
+                    break;
+                case 5:
+                    return 31;
+                    break;
+                case 6:
+                    return 30
+                    break; 
+                case 7:
+                    return 31;
+                    break;
+                case 8:
+                    return 31;
+                    break;
+                case 9:
+                    return 30;
+                    break;
+                case 10:
+                    return 31;
+                    break;
+                case 11:
+                    return 30;
+                    break;
+                case 12:
+                    return 31
+                    break;
+            }
+        }
+
+        function numberOfDaysOfUntilDesiredYear(number){
+            let numberOfDays=0;
+            for (let month = 1; month <=number; month++) {
+                console.log(dayOfMonth(month))
+                numberOfDays+=dayOfMonth(month)
+            }
+            return numberOfDays;
+        }
+
+        function numberOfYear(yearOfBirth,yearOfDesired){
+            return yearOfDesired - yearOfBirth-1;
+        }
+
+        function numberOfDayForLeapYear(yearOfBirth,yearOfDesired){
+            let leapDay=0;
+            for (let index = yearOfBirth; index < yearOfDesired; index++) {
+                if(index%4===0){
+                    leapDay++;
+                }   
+            }
+            return leapDay;
+        }
+
+        function remainDayOfBirthMonth(birthDay, birthMonth){
+            let totalDay = 0;
+            let remainDays = 0;
+            let totalDayOfBirthMonth = dayOfMonth(birthMonth);
+            remainDays = totalDayOfBirthMonth - birthDay;
+            totalDay +=remainDays;
+            return totalDay
+        }
+
+        function remainDayOfBirthYear(birthDay, birthMonth){
+            let totalDayOfBirthYear = 0;
+            for (let month = 12; month > birthMonth; month--) {
+                totalDayOfBirthYear += dayOfMonth(month)
+            }
+            totalDayOfBirthYear += remainDayOfBirthMonth(birthDay,birthMonth);
+            return totalDayOfBirthYear;
+        }
+        
+        function daysUntilDesiredYear(birthDay,birthMonth,birthYear,desiredYear){
+            let totalYear = numberOfYear(birthYear,desiredYear);
+            let totalDayUntilDesiresDate = totalYear * 365;
+            totalDayUntilDesiresDate += remainDayOfBirthYear(birthDay,birthMonth);
+            totalDayUntilDesiresDate += numberOfDayForLeapYear(birthYear,desiredYear);
+
+            return totalDayUntilDesiresDate;
+        }
+
+
+        function dayToDesiredMonth(desiredMonth, desiredYear){
+            let dayToMonth = 0;
+
+            for (let month = 1; month < desiredMonth; month++) {
+                dayToMonth += dayOfMonth(month);
+            }
+
+            if(desiredYear%4 === 0 &&  desiredMonth > 2){
+                    dayToMonth++;
+            }
+
+            return dayToMonth;
+        }
+
+
+        function totalDay(birthDay,birthMonth,birthYear,desiredDay,desiredMonth,desiredYear){
+
+            let totalDay = 0;
+
+            totalDay += daysUntilDesiredYear(birthDay,birthMonth,birthYear,desiredYear);
+        
+
+            totalDay += dayToDesiredMonth(desiredMonth,desiredYear);
+            totalDay += desiredDay;
+
+            return totalDay;
+
+
+        }
+
+        console.log(totalDay(1,1,1987,23,04,2022))
+
+
+    </script>
+</body>
+</html>
