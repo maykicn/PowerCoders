@@ -154,6 +154,7 @@ h3{
     display: block; /*when I use display  it starts to look*/
     margin-top: 10px;
 }
+
 /*Align with picture and text*/
 .about-content{
     display: flex;
@@ -251,4 +252,49 @@ h4{
 .contact-item p{
     font-size: 14px;
     line-height: 33 px;
+}
+
+/* FOOTER */
+
+.footer-container{
+    background-color: black;
+}
+.footer{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 30vh;
+}
+.footer-title{
+    margin: -10px 0 ;
+}
+.footer-title h2{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color:red;
+    font-size: 30px;
+    font-weight: 600;
+}
+.footer-title h2::after{
+    content: "";
+    width: 30px;
+    height: 3px;
+    background-color: red;
+    margin: 0 auto;
+    display: block; /*when I use display  it starts to look*/
+    margin-top: 10px;
+}
+.footer:nth-child(1) p{
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+.footer-icon i{
+    margin: 0 50px;
+    font-size: 50px;
+    color: white;
 }
