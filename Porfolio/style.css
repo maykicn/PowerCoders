@@ -258,6 +258,7 @@ h4{
 
 .footer-container{
     background-color: black;
+    padding: 20px 0;
 }
 .footer{
     margin: 0;
@@ -276,7 +277,7 @@ h4{
     text-align: center;
     margin: 0 auto;
     color:red;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
 }
 .footer-title h2::after{
@@ -290,7 +291,7 @@ h4{
 }
 .footer:nth-child(1) p{
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
 }
 .footer-icon i{
