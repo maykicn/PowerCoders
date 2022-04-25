@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       
+      
+
+
+        function checkCharacter(input, index) {
+            character = input.charAt(index)
+            if (isNaN(character)|| character === ' ') {
+
+                if (character === '(' || character === ')' || character === ' ' || character === '-' || character === '.') {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+
+        function startWithZero(input) {
+            thirdCharacter = input.charAt(3);
+            sixthCharacter = input.charAt(6);
+            ninethCharacter = input.charAt(9);
+            if (checkCharacter(input, 3)) {
+                if (thirdCharacter === sixthCharacter && thirdCharacter === ninethCharacter && sixthCharacter === ninethCharacter) {
+                    return true
+                } else {
+                    return false;
+                }
+
+            } else {
+                if (input.length === 10) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+
+        }
+
+
+        function startWithParantheses(input) {
+            secondCharacter = input.charAt(1);
+            fifthCharacter = input.charAt(5);
+            eigthCharacter = input.charAt(8);
+            eleventhCharacter = input.charAt(11);
+
+            if(secondCharacter == 0){
+                if (checkCharacter(input,5)) {
+                    if (fifthCharacter === eigthCharacter && fifthCharacter === eleventhCharacter && eigthCharacter === eleventhCharacter) {
+                    return true
+                } else {
+                    return false;
+                }
+            }else {
+                if (input.length === 12) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+            }else{
+                return false
+            }
+            
+        }
+
+        function checkInput(input) {
+            let totalDigit = 0;
+            let totalCharacter = 0;
+            let eachCharacter;
+            for (let index = 0; index < length; index++) {
+                eachCharacter = input.charAt(index);
+                if (isNaN(eachCharacter)||eachCharacter === ' ') {
+                    if (eachCharacter === '(' || eachCharacter === ')' || eachCharacter === ' ' || eachCharacter === '-' || eachCharacter === '.') {
+                        totalCharacter++;
+                    } else {
+                        return false;
+                    }
+
+                } else {
+                    totalCharacter++
+                    totalDigit++;
+                }
+            }
+            if (totalCharacter <= 15 && totalDigit === 10) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+        let number = prompt("Enter the number that you want to check");
+
+        firstCharacter = number.charAt(0);
+
+        if(firstCharacter== 0){
+            console.log('SONUC: '+startWithZero(number))
+        }else if(firstCharacter == '('){
+            console.log('SONUC: '+startWithParantheses(number))
+            
+        }else{
+            console.log('NUMBER is invalid')
+            
+        }
+
+    </script>
+</body>
+
+</html>
