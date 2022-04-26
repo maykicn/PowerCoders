@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatest Common Diviser</title>
+</head>
+<body>
+    <script>
+
+        let firstNumber = prompt('Enter first number');
+        let secondNumber = prompt('Enter second number');
+        let bigNumber;
+        let greatestCommonDiviser;
+
+        firstNumber > secondNumber ? bigNumber = firstNumber : bigNumber = secondNumber;
+        for (let index = 1; index <= bigNumber; index++) {
+            if(firstNumber%index === 0 && secondNumber%index === 0){
+                greatestCommonDiviser = index;
+            }
+            
+        }
+        console.log(`Greatest common diviser is ${greatestCommonDiviser}`)
+
+
+
+
+
+    </script>
+</body>
+</html>
