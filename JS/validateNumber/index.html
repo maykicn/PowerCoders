@@ -31,7 +31,7 @@
             sixthCharacter = input.charAt(6);
             ninethCharacter = input.charAt(9);
             if (checkCharacter(input, 3)) {
-                if (thirdCharacter === sixthCharacter && thirdCharacter === ninethCharacter && sixthCharacter === ninethCharacter) {
+                if (thirdCharacter === sixthCharacter && thirdCharacter === ninethCharacter) {
                     return true
                 } else {
                     return false;
@@ -49,25 +49,25 @@
 
 
         function startWithParantheses(input) {
-            secondCharacter = input.charAt(1);
+            secondCharacter = input.charAt(1);//-----------------
             fifthCharacter = input.charAt(5);
             eigthCharacter = input.charAt(8);
             eleventhCharacter = input.charAt(11);
 
             if(secondCharacter == 0){
                 if (checkCharacter(input,5)) {
-                    if (fifthCharacter === eigthCharacter && fifthCharacter === eleventhCharacter && eigthCharacter === eleventhCharacter) {
+                    if (fifthCharacter === eigthCharacter && fifthCharacter === eleventhCharacter ) {
                     return true
                 } else {
                     return false;
                 }
-            }else {
-                if (input.length === 12) {
-                    return true
-                } else {
-                    return false
+                }else {
+                    if (input.length === 12) {
+                        return true
+                    } else {
+                        return false
+                    }
                 }
-            }
             }else{
                 return false
             }

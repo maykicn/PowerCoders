@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Lib</title>
+</head>
+
+<body>
+    <script>
+        function Words(noun, verb, adverb) {
+            this.noun = noun;
+            this.verb = verb;
+            this.adverb = adverb;
+            this.sentence = function () {
+                console.log("chello")
+                // return `${this.noun} ${this.verb} ${this.adverb} `
+                return this.noun;
+            }
+        }
+        let newSentence = new Words("Aykut", "plays", "well");
+        document.write(newSentence.noun);
+        document.write(newSentence.sentence());
+        
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
