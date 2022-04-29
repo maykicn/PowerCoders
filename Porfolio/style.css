@@ -405,3 +405,25 @@ h4{
 }
 
 /* ABOUT  FINISH */
+
+/* PORTFOLIO  START */
+@media only screen and (max-width:1000px){
+    .portfolio{
+         flex-wrap: wrap;
+         justify-content: space-around;
+     }
+     .portfolio li{
+         width: 40%;
+     }
+ }
+ 
+ @media only screen and (max-width:600px){
+     .portfolio{
+          flex-wrap: wrap;
+      }
+      .portfolio li{
+          width: 100%;
+      }
+  }
+
+/* PORTFOLIO  FINISH */
