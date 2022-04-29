@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Lato:wght@100&family=Poppins:wght@400;500;600;700;800;900&display=swap');
 *,
 *::before,
@@ -7,6 +7,8 @@
     padding: 0;
     box-sizing: border-box;
     border: 0;
+}
+p{
     font-family: 'Poppins', sans-serif;
 }
 a,
@@ -38,9 +40,14 @@ p{
     margin: 0 auto;
     padding: 0 15px;
 }
+.header-menu{
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 1200;
+}
 
 .header{
-    background-image: url(./sky.jpg);
+    background-image: url(./images/sky.jpg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -66,6 +73,10 @@ ul{
 
 li{
     margin-left: 27px;
+    
+    /* flex-basis: 25%; */
+    
+    
 }
 a{
     color:black;
@@ -88,7 +99,7 @@ h1{
     line-height: 0.4;
     letter-spacing: 2px;
     font-family: 'Herr Von Muellerhoff', cursive;
-    color: blue;
+    color:red;
 }
 .first-letter{
     font-size: 10.3rem;
@@ -131,8 +142,8 @@ h3{
 
 
 /* ABOUT */
-.about{
-    margin-bottom: 150px;
+#about{
+    margin-bottom: 250px;
 }
 .title{
     margin: 60px 0 ;
@@ -141,7 +152,7 @@ h3{
     width: 100%;
     text-align: center;
     margin: 0 auto;
-    color:red;
+    color:blue;
     font-size: 30px;
     font-weight: 600;
 }
@@ -149,7 +160,7 @@ h3{
     content: "";
     width: 30px;
     height: 3px;
-    background-color: red;
+    background-color: rgb(49, 34, 186);
     margin: 0 auto;
     display: block; /*when I use display  it starts to look*/
     margin-top: 10px;
@@ -159,22 +170,27 @@ h3{
 .about-content{
     display: flex;
     align-items: center;
-    justify-content: space-around ;
+    justify-content: space-between ;
 }
 
 /*Make picture content smaller */
 .about-img{
-    width: 40%  ;
+    width: 50%;
+    margin-top: 75px;
 }
 
-/* make picture smeller*/
+/* make picture smaller*/
 .about-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5%;
 }
 .about-text{
+    font-size: 1.5em;
+    line-height: 1.5em;
     width: 40%;
+    margin-top: 75px;  
 }
 h4{
       margin-bottom: 25px;
@@ -193,27 +209,42 @@ h4{
 
 
 /* PORTFOLIO */
-/* .portfolio{
-    
-} */
+#portfolio{
+    width: 90%;
+    margin-bottom: 250px;
+    margin: 0 auto;
+}
+#subtitle{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color:navy;
+    font-size: 25px;
+    font-weight: 600;
+}
 .portfolio-items{
     list-style-type: none;
-    margin: 0;
+    margin: 10px 10px;
     padding: 0;
+    height: 35vh;
     position: relative;
+    border-radius: 5%;
     overflow: hidden;
+    mask-image: radial-gradient(white,black);
+    border: 1px solid lightblue;
+    
 }
 .portfolio-items img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: 0.5s;
+      
 }
-
 .overlay{
     width: 100%;
     height: 100%;
-    background-color: bisque;
+    background-color: rgb(227, 225, 222);
     position: absolute;
     top: 100%;
     left: 0;
@@ -225,12 +256,21 @@ h4{
     align-items: center;
     transition: 0.5s;
 }
+.overlay p{
+    font-size: 15px;
+    text-align: center;
+}
 .portfolio-items:hover .overlay{
     top: 0;
     
 }
 .portfolio-items:hover img{
     transform: scale(1.1);
+    
+}
+.portfolio-items:hover{
+    border-radius: 5%;
+    
 }
 /* CONTACT */
 .contact{
@@ -246,8 +286,8 @@ h4{
 
 .contact-item i{
     font-size: 25px;
-    margin-bottom: 20px;
-    color: red;
+    margin-bottom: 10px;
+    color: navy;
 }
 .contact-item p{
     font-size: 14px;
@@ -276,7 +316,7 @@ h4{
     width: 100%;
     text-align: center;
     margin: 0 auto;
-    color:red;
+    color:navy;
     font-size: 20px;
     font-weight: 600;
 }
@@ -284,7 +324,7 @@ h4{
     content: "";
     width: 30px;
     height: 3px;
-    background-color: red;
+    background-color:navy;
     margin: 0 auto;
     display: block; /*when I use display  it starts to look*/
     margin-top: 10px;
@@ -298,4 +338,7 @@ h4{
     margin: 0 50px;
     font-size: 50px;
     color: white;
+}
+#contact p{
+    font-size: 1em;
 }

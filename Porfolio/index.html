@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="./fontawesome-free-6.1.1-web/css/all.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -20,10 +22,10 @@
                     </div>
                     <section class="header-menu">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Summary</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#header">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#summary">Summary</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </section>
                 </nav>
@@ -42,15 +44,15 @@
         <article class="about">
             <article class="container"> 
                 <section class="title">
-                    <h2>ABOUT</h2>
+                    <h2>ABOUT ME</h2>
                 </section>
                 <section class="about-content">
                     <div class="about-img">
-                        <img src="about.jpeg " alt="">
+                        <img src="./images/about.jpeg " alt="">
                     </div>
                     <div class="about-text">
                         <h4>My Story</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur error voluptate, culpa natus ratione a. <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eos? <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. In esse vitae reprehenderit velit quasi natus molestiae temporibus pariatur nisi quos dolorum nulla officiis harum itaque debitis accusantium aspernatur aliquam nostrum numquam fuga, quod architecto. Exercitationem officiis dolorum explicabo, ab ipsa ut ratione expedita ipsam pariatur.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci et id consequuntur inventore commodi natus deleniti at impedit sequi possimus, beatae ea sint perferendis. Eligendi dolore suscipit, sed ullam ab voluptatum soluta ipsa dicta officiis eos, debitis facere est voluptates, nesciunt perferendis sequi rerum accusantium nobis ratione quis enim obcaecati molestiae voluptate aut. Laudantium officiis ex.</p>
                     </div>
                 </section>
             </article> 
@@ -62,35 +64,41 @@
     <!--PORTFOLIO START-->
 
     <section id="portfolio">
+        <section class="title">
+            <h2 id="subtitle">PROJECTS</h2>
+        </section>
         <ul class="portfolio">
             <li class="portfolio-items">
-                <img src="./01.jpg" alt="">
+                <img src="./images/04.png" alt="">
                 <div class="overlay">
-                    <i class="fa-solid fa-asterisk"></i>
+                    <P >Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias consequuntur iusto similique assumenda cumque iste modi culpa sunt qui doloremque quos veniam, sequi voluptatem necessitatibus?</P>
                 </div>
             </li>
-            <li class="portfolio-items">
-                <img src="./02.jpg" alt="">
+            <li class="portfolio-items project">
+                <img src="./images/01.png" alt="">
             </li>
             <li class="portfolio-items">
-                <img src="./03.jpg" alt="">
+                <img src="./images/02.png" alt="">
             </li>
             <li class="portfolio-items">
-                <img src="./04.jpg" alt="">
+                <img src="./images/03.png" alt="">
             </li>
         </ul>
+        <section class="title">
+            <h2 id="subtitle">HOBBIES</h2>
+        </section>
         <ul class="portfolio">
             <li class="portfolio-items">
-                <img src="./05.jpg" alt="">
+                <img src="./images/05.jpeg" alt="">
             </li>
             <li class="portfolio-items">
-                <img src="./06.jpg" alt="">
+                <img src="./images/06.webp" alt="">
             </li>
             <li class="portfolio-items">
-                <img src="./07.jpg" alt="">
+                <img src="./images/07.jpeg" alt="">
             </li>
             <li class="portfolio-items">
-                <img src="./08.jpg" alt="">
+                <img src="./images/08.webp" alt="">
             </li>
         </ul>
          
@@ -98,9 +106,9 @@
 
     <!--PORTFOLIO START-->
 
-    <!-- DISCOVER START-->
+    <!-- SUMMARY START-->
 
-    <section id="discover">
+    <section id="summary">
         <article class="about">
             <article class="container"> 
                 <section class="title">
@@ -108,7 +116,7 @@
                 </section>
                 <section class="about-content">
                     <div class="about-img">
-                        <img src="about.jpeg " alt="">
+                        <img src="./images/about.jpeg " alt="">
                     </div>
                     <div class="about-text">
                         <h4>My Story</h4>
@@ -119,7 +127,7 @@
         </article>
     </section>
 
-    <!-- DISCOVER FINIS-->
+    <!-- SUMMARY FINISH-->
     <!--CONTACT START-->
     <section id="contact">
         <article class="container">
@@ -129,9 +137,8 @@
              <ul class="contact-content">
                  <li class="contact-item">
                     <i class="fa-solid fa-phone"></i>
-                    <p>0782085684</p>
+                    <p>078-208-5684</p>
                     <br>
-                    <p>0#########</p>
                  </li>
                  <li class="contact-item">
                     <i class="fa-solid fa-location-pin"></i>
@@ -152,27 +159,33 @@
     <!--FOOTER START-->
     <!--FOOTER FINISH-->
 
-    <footer id="id">
+    <footer id="contact">
         <article class="footer-container">
             <ul class="footer">
                 <li class="footer-title">
-                    <h2>ABOUT ME</h2>
-                </li>
-                <li>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet tempora esse modi reprehenderit architecto rem, debitis beatae officia nesciunt vitae expedita! Magni consectetur reprehenderit at ipsam aspernatur excepturi placeat amet rerum, eligendi soluta quod maiores sit animi facere omnis distinctio ex tempore esse itaque sequi iusto commodi? Minus veritatis nisi debitis nostrum unde eligendi explicabo!</p>
+                    <h2>LINKS</h2>
                 </li>
                 <li>
                     <ul class="social">
                        <li class="footer-icon">
-                           <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                           <a href="#"><i class="fa-brands fa-facebook"></i></a>
                        </li>
                        <li class="footer-icon">
-                        <a href="#"><i class="fa-solid fa-asterisk"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
                        </li>
                        <li class="footer-icon">
-                        <a href="#"><i class="fa-solid fa-asterisk"></i></a>
+                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                       </li>
+                       <li class="footer-icon">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                        </li>
                     </ul>
+                </li>
+                <li>
+                    <p>Designed by and made by Aykut CAN</p>
+                </li>
+                <li>
+                    <p>&copy 2022</p>
                 </li>
             </ul>
         </article>
