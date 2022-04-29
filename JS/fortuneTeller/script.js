@@ -2,24 +2,8 @@
 
 
 
-let partner = ['Bellamy',
-    'Charlie',
-    'Dakota',
-    'Emerson',
-    'Finley',
-    'Justice',
-    'River',
-    'Skyler',
-    'Tatum',
-    ];
-let job = ['Aerospace Engineering and Operations Technicians',
-   ' Aerospace Engineers',
-    'Agricultural Engineers',
-    'Architect',
-    'Architectural Drafters',
-    'Automotive Engineering Technicians',
-   ' Automotive Engineers',
-    ];
+let partner = ['Bellamy','Charlie','Dakota','Emerson','Finley','Justice','River','Skyler','Tatum'];
+let job = ['Aerospace Engineering and Operations Technicians',' Aerospace Engineers','Agricultural Engineers','Architect','Architectural Drafters','Automotive Engineering Technicians','Automotive Engineers'];
 let loc = ['New York City','Los Angeles','Chicago'];
 let children = [2,3,4];
 

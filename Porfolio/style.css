@@ -42,7 +42,7 @@ p{
 }
 .header-menu{
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: 1200;
 }
 
@@ -73,10 +73,7 @@ ul{
 
 li{
     margin-left: 27px;
-    
-    /* flex-basis: 25%; */
-    
-    
+     
 }
 a{
     color:black;
@@ -342,3 +339,47 @@ h4{
 #contact p{
     font-size: 1em;
 }
+
+/* RESPONSIVE */
+
+/* HAMBURGER ICON START */
+#menu-icon{
+    font-size: 25px;
+    display: none;
+    margin-left: 20px;
+}
+
+/* HAMBURGER ICON FINISH */
+
+/* HEADER MENU START */
+@media only screen and (max-width:768px){
+     .header-menu ul{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         position: absolute; /* I will use top */
+         top: 100px;
+         left: 0;
+         background-color: lightblue;
+         width: 100%;
+         overflow: hidden;
+         transition: max-height .7 s;
+         opacity: 50%;
+     }
+
+     .header-menu ul li{
+        margin-right: 50px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+     }
+     .header-menu ul li a{
+         color: blue;
+     }
+     .header-menu #menu-icon{
+         display: block;
+         cursor: pointer;
+     }
+     
+}
+/* HEADER MENU FINISH */
