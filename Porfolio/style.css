@@ -168,6 +168,7 @@ h3{
     display: flex;
     align-items: center;
     justify-content: space-between ;
+    flex-wrap: wrap;
 }
 
 /*Make picture content smaller */
@@ -383,3 +384,24 @@ h4{
      
 }
 /* HEADER MENU FINISH */
+
+/* ABOUT  START */
+
+@media only screen and (max-width:1000px){
+
+    .about-img{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .about-text{
+        width: 100%;
+    }
+
+    #about {
+        margin-bottom: 150px;
+    }
+
+
+}
+
+/* ABOUT  FINISH */
