@@ -69,11 +69,12 @@ p{
 }
 ul{
     display: flex;
+    
 }
 
 li{
     margin-left: 27px;
-     
+    flex-basis: 25%;
 }
 a{
     color:black;
@@ -256,7 +257,8 @@ h4{
 }
 .overlay p{
     font-size: 15px;
-    text-align: center;
+    text-align:justify;
+    margin: auto 15px;
 }
 .portfolio-items:hover .overlay{
     top: 0;
