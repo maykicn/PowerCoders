@@ -1,0 +1,83 @@
+<html>
+    <body>
+        <p id="dataParagraph"></p>
+        <input id="textInput" type="text" placeholder="Enter your data">
+        <button id="storeButton">Store!</button>
+        <button id="removeButton">Remove Item!</button>
+    </body>
+    <script>
+        const storeButton = document.getElementById('storeButton');
+        const dataParagraph = document.getElementById('dataParagraph');
+        const textInput = document.getElementById('textInput');
+        const removeButton = document.getElementById('removeButton')
+
+        const obj = {
+            firstName: "Dominic",
+            lasName: "jarman",
+            age:22.5,
+
+        };
+        localStorage.setItem('heyThatIsMe',obj)
+        console.log(typeof obj)
+        
+        
+        storeButton.onclick = () => {
+            localStorage.setItem('userInput', textInput.value);
+            localStorage.setItem('test123', 'Some other value');
+            putDataIntoDOM();
+        }
+        removeButton.onclick = () => {
+           // localStorage.removeItem('userInput');
+            localStorage.clear();
+            putDataIntoDOM();
+        }
+        function putDataIntoDOM(){
+            dataParagraph.innerText = `Your data was: ${localStorage.getItem('userInput')}`;
+        }
+        putDataIntoDOM();
+        
+    </script>
+</html>
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="dataParagraph">your data</p>
+    <input type="text" id="textInput" placeholder="Enter your name">
+    <button id="storeButton">Store!</button>
+    <button id="removeButton">Clear!</button>
+</body>
+<script>
+    const removeButton = document.getElementById('removeButton')
+    const storeButton = document.getElementById('storeButton')
+    const dataParagraph = document.getElementById('dataParagraph')
+    const textInput = document.getElementById('textInput')
+
+    storeButton.onclick = () =>{
+        localStorage.setItem('userInput',textInput.value)
+        refresh();
+    }
+    removeButton.onclick = () =>{
+        localStorage.clear;
+        refresh();
+    }
+
+    function refresh(){
+        dataParagraph.innerText = `Your data was ${localStorage.getItem|('userInput')}`
+        alert('deneme')
+    }
+    
+    refresh();
+
+</script>
+</html>  -->

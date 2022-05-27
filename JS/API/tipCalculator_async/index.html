@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TipCalculator</title>
+</head>
+<body>
+    <select name="currenciesFrom" id="currenciesFrom">
+    </select>   
+    <select name="currenciesTo" id="currenciesTo">
+    </select>    
+    
+    <input type="number" id="billAmonut" placeholder="Please enter your bill amount as number, e.g. 230.50">
+    <input type="number" id="tipRate" placeholder="Please enter the tip rate as number, e.g. 15 for 15%">
+    <input type="number" id="excludeVAT" placeholder="Please enter the VAT as number if you want to exclude it, e.g. 18 for 18%">
+    <input type="number" id="convert">
+    
+    <button id="calculate">Calculate Tip</button>
+    <button id="convertButtn">Convert</button>
+    <p id="totalAmount"></p>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
